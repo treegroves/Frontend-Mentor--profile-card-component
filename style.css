@@ -109,18 +109,11 @@ body {
   background-color: var(--clr-primary-300);
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    background-position: right 50vw bottom 40vh, left 50vw top 53vh;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  body {
-    background-position: right 40vw bottom 50vh, left 40vw top 43vh;
-  }
-}
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -136,19 +129,8 @@ body {
   -moz-box-shadow: 25px 41px 88px -23px rgba(0, 0, 0, 0.3);
 }
 
-.card .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.card .banner img {
+.banner {
   border-radius: 15px 15px 0 0;
-}
-
-.personal-details {
-  display: flex;
-  align-items: center;
 }
 
 .photo {
@@ -158,8 +140,9 @@ body {
   border-radius: 54px;
 }
 
-.photo img {
-  border-radius: 50px;
+.personal-details {
+  display: flex;
+  align-items: center;
 }
 
 .name {
@@ -202,4 +185,31 @@ body {
   color: var(--clr-primary-200);
   font-size: var(--fs-100);
   font-weight: var(--fw-regular);
+}
+
+.attribution {
+  color: var(--clr-primary-400);
+  font-size: var(--fs-100);
+  font-weight: var(--fw-regular);
+
+  margin: 5px;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+a {
+  color: var(--clr-primary-400);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-position: right 50vw bottom 40vh, left 50vw top 53vh;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-position: right 40vw bottom 45vh, left 40vw top 43vh;
+  }
 }
